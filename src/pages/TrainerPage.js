@@ -13,7 +13,7 @@ function TrainerPage() {
 
   useEffect(() => {
     const fetchTrainers = async () => {
-      const response = await fetch("/api/trainer/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/trainer/");
       const json = await response.json();
 
       if (response.ok) {

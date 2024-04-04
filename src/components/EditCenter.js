@@ -23,7 +23,7 @@ function EditCenter() {
 
         const Center  = { name, address, state, country,status }
 
-        const response = await fetch('api/center/'+location.state._id, {
+        const response = await fetch('https://gms-backend-cj6n.onrender.com/api/center/'+location.state._id, {
             method: 'PATCH',
             body: JSON.stringify(Center),
             headers: {

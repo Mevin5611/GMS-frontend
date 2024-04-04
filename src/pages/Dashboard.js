@@ -12,7 +12,7 @@ function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchMembers = async () => {
-      const response = await fetch("/api/member/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/");
       const json = await response.json();
 
       if (response.ok) {
@@ -28,7 +28,7 @@ function Dashboard() {
       setExpiredMembersCount(filteredMembers.length);
     };
     const fetchTrainers = async () => {
-      const response = await fetch("/api/trainer/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/trainer/");
       const json = await response.json();
 
       if (response.ok) {

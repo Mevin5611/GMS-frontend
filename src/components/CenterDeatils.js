@@ -13,7 +13,7 @@ const CenterDeatils = ({ center }) => {
       `Are you sure you want to delete ${center.name}?`
     );
     if (confirmDelete) {
-      const response = await fetch("api/center/" + center._id, {
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/center/" + center._id, {
         method: "DELETE",
       });
       const json = await response.json();

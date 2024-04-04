@@ -21,7 +21,7 @@ function CenterForm() {
 
     const Center = { name, address, state, country, status };
 
-    const response = await fetch("api/center/", {
+    const response = await fetch("https://gms-backend-cj6n.onrender.com/api/center/", {
       method: "POST",
       body : JSON.stringify(Center),
       headers :{

@@ -14,7 +14,7 @@ function ExpiredMember() {
     
 
     const fetchMembers = async () => {
-      const response = await fetch("/api/member/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/");
       const json = await response.json();
 
       if (response.ok) {
@@ -48,7 +48,7 @@ function ExpiredMember() {
     const toWithCountryCode = '+91' + Member.phone;
     const smsBody = `Message From Aesthetic Fitness Dear ${Member.name}, Your Package is due for renewal. Pleasure Renew to avoid any inconvenience. Always in your service.`;
 
-    fetch('/api/send-sms', {
+    fetch('https://gms-backend-cj6n.onrender.com/api/send-sms', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function ExpiredMember() {
   formData.append("status",'Expired');
   const updateMemberStatus = async (Member) => {
     try {
-      const response = await fetch("api/member/" + Member._id, {
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/" + Member._id, {
         method: "PATCH",
         body: formData
        

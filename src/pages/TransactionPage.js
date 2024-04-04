@@ -18,7 +18,7 @@ function TransactionPage() {
 
   useEffect(() => {
     const fetchMembers = async () => {
-      const response = await fetch("/api/member/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/");
       const json = await response.json();
 
       if (response.ok) {

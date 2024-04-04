@@ -16,7 +16,7 @@ function PackageDetails({Package}) {
         `Are you sure you want to delete ${Package.name}?`
       );
       if (confirmDelete){
-        const response = await fetch('api/package/' + Package._id, {
+        const response = await fetch('https://gms-backend-cj6n.onrender.com/api/package/' + Package._id, {
           method: 'DELETE',
           headers:{
               'Authorization':`Bearer ${user.token}`

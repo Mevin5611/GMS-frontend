@@ -40,7 +40,7 @@ function EditMember() {
 
   useEffect(() => {
     const fetchCenters = async () => {
-      const response = await fetch("/api/center/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/center/");
       const json = await response.json();
 
       if (response.ok) {
@@ -50,7 +50,7 @@ function EditMember() {
     fetchCenters();
 
     const fetchPackages = async () => {
-      const response = await fetch("/api/package/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/package/");
       const json = await response.json();
 
       if (response.ok) {
@@ -118,7 +118,7 @@ function EditMember() {
     formData.append("expiredate",expiredate );
     formData.append("status", status);
 
-    const response = await fetch("api/member/" + location.state._id, {
+    const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/" + location.state._id, {
       method: "PATCH",
       body: formData,
       headers: {

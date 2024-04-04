@@ -30,7 +30,7 @@ function TrainerForm() {
 
   useEffect(() => {
     const fetchCenters = async () => {
-      const response = await fetch("/api/center/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/center/");
       const json = await response.json();
 
       if (response.ok) {
@@ -71,7 +71,7 @@ function TrainerForm() {
 
     
 
-    const response = await fetch("api/trainer/", {
+    const response = await fetch("https://gms-backend-cj6n.onrender.com/api/trainer/", {
       method: "POST",
       body: formData, // Send the form data instead of JSON
       headers: {

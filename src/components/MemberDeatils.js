@@ -15,7 +15,7 @@ function MemberDeatils({ Member }) {
       `Are you sure you want to delete ${Member.name}?`
     );
     if (confirmDelete) {
-      const response = await fetch("api/member/" + Member._id, {
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/" + Member._id, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${user.token}`,

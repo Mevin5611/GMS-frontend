@@ -28,7 +28,7 @@ function RenewMember() {
 
   useEffect(() => {
     const fetchPackages = async () => {
-      const response = await fetch("/api/package/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/package/");
       const json = await response.json();
 
       if (response.ok) {
@@ -74,7 +74,7 @@ function RenewMember() {
     formData.append("expiredate", expiredate);
     formData.append("status", status);
 
-    const response = await fetch("api/member/" + location.state._id, {
+    const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/" + location.state._id, {
       method: "PATCH",
       body: formData,
     });

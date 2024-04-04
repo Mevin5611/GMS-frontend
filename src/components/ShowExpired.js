@@ -8,7 +8,7 @@ function ShowExpired() {
 
   useEffect(() => {
     const fetchMember = async () => {
-      const response = await fetch("/api/member/" + location.state);
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/" + location.state);
       const data = await response.json();
       setDetails(data);
     };

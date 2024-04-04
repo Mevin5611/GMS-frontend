@@ -17,7 +17,7 @@ function ViewTrainerDetails() {
 
   useEffect(() => {
     const fetchTrainer = async () => {
-      const response = await fetch("/api/trainer/" + location.state);
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/trainer/" + location.state);
       const json = await response.json();
 
       if (response.ok) {
@@ -28,7 +28,7 @@ function ViewTrainerDetails() {
     };
 
     const fetchCenter = async () => {
-      const response = await fetch("/api/center/" + trainer.center, {
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/center/" + trainer.center, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
@@ -62,7 +62,7 @@ function ViewTrainerDetails() {
       `Are you sure you want to delete ${trainer.name}?`
     );
     if (confirmDelete) {
-      const response = await fetch("api/trainer/" + trainer._id, {
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/trainer/" + trainer._id, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${user.token}`,

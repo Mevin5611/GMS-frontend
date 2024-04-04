@@ -39,7 +39,7 @@ function MemberForm() {
 
   useEffect(() => {
     const fetchCenters = async () => {
-      const response = await fetch("/api/center/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/center/");
       const json = await response.json();
 
       if (response.ok) {
@@ -48,7 +48,7 @@ function MemberForm() {
     };
 
     const fetchPackages = async () => {
-      const response = await fetch("/api/package/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/package/");
       const json = await response.json();
 
       if (response.ok) {
@@ -146,7 +146,7 @@ function MemberForm() {
     formData.append("expiredate", futureDate);
     formData.append("status", status);
 
-    const response = await fetch("api/member/", {
+    const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/", {
       method: "POST",
       body:formData ,
       headers: {

@@ -10,7 +10,7 @@ function EditPackage() {
 
   useEffect(() => {
     const fetchCenters = async () => {
-      const response = await fetch('/api/center/')
+      const response = await fetch('https://gms-backend-cj6n.onrender.com/api/center/')
       const json = await response.json()
 
       if (response.ok) {
@@ -37,7 +37,7 @@ function EditPackage() {
 
         const Package = { name, price, center, days, trainingtype }
 
-        const response = await fetch('api/package/'+location.state._id, {
+        const response = await fetch('https://gms-backend-cj6n.onrender.com/api/package/'+location.state._id, {
             method: 'PATCH',
             body: JSON.stringify(Package),
             headers: {

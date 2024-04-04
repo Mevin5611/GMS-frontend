@@ -21,7 +21,7 @@ const WorkoutForm = () => {
 
         const Workout={title,reps,load}
 
-        const response = await fetch('api/workouts/',{
+        const response = await fetch('https://gms-backend-cj6n.onrender.com/api/workouts/',{
             method : 'POST',
             body : JSON.stringify(Workout),
             headers :{

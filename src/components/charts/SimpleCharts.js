@@ -13,7 +13,7 @@ export default function SimpleCharts() {
   const { user } = useAuthContext();
   useEffect(() => {
     const fetchMembers = async () => {
-      const response = await fetch("/api/member/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/member/");
       const json = await response.json();
 
       if (response.ok) {
@@ -30,7 +30,7 @@ export default function SimpleCharts() {
       setExpiredMembersCount(filteredMembers.length);
     };
     const fetchTrainers = async () => {
-      const response = await fetch("/api/trainer/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/trainer/");
       const json = await response.json();
 
       if (response.ok) {
@@ -38,7 +38,7 @@ export default function SimpleCharts() {
       }
     };
     const fetchCenters = async () => {
-      const response = await fetch("/api/center/", {
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/center/", {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

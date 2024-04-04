@@ -39,7 +39,7 @@ function EditTrainer() {
   useEffect(() => {
     console.log(typeof(location.state.startdate));
     const fetchCenters = async () => {
-      const response = await fetch("/api/center/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/center/");
       const json = await response.json();
 
       if (response.ok) {
@@ -88,7 +88,7 @@ function EditTrainer() {
     formData.append("pincode", pincode);
 
 
-    const response = await fetch("api/trainer/" + location.state._id, {
+    const response = await fetch("https://gms-backend-cj6n.onrender.com/api/trainer/" + location.state._id, {
       method: "PATCH",
       body: formData,
       headers :{

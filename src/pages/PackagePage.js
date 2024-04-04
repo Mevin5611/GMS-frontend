@@ -12,7 +12,7 @@ function PackagePage() {
 
   useEffect(() => {
     const fetchPackages = async () => {
-      const response = await fetch("/api/package/",{
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/package/",{
         headers: {
           Authorization: `Bearer ${user.token}`,
         }

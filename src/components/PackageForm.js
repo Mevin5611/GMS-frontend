@@ -10,7 +10,7 @@ function PackageForm() {
 
   useEffect(() => {
     const fetchCenters = async () => {
-      const response = await fetch("/api/center/");
+      const response = await fetch("https://gms-backend-cj6n.onrender.com/api/center/");
       const json = await response.json();
 
       if (response.ok) {
@@ -39,7 +39,7 @@ function PackageForm() {
 
     const Package = { name, price, center, days, trainingtype };
 
-    const response = await fetch("api/package/", {
+    const response = await fetch("https://gms-backend-cj6n.onrender.com/api/package/", {
       method: "POST",
       body: JSON.stringify(Package),
       headers :{
