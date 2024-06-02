@@ -14,7 +14,7 @@ function TransactionPage() {
   const [members, setMembers] = useState(null);
   const [searchQuery, setSearchQuery] = useState(""); // Step 1: State for search query
   const [filterOption, setFilterOption] = useState("all"); // Step 1: State for filter option
-  const [transactionDateFilter, setTransactionDateFilter] = useState("");
+ 
 
   useEffect(() => {
     const fetchMembers = async () => {
